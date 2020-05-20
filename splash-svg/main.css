@@ -1,0 +1,59 @@
+.splash-icon {
+  cursor: pointer;
+}
+.splash-icon path {
+  transition: fill 200ms ease-in-out;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.splash-mask {
+  transform-origin: 50% 50%;
+  transform: scale(0.5);
+}
+.active .splash-icon {
+  animation: beat 600ms ease-in-out;
+}
+.active .splash-icon path {
+  fill: #c00;
+}
+.active .splash-lines {
+  animation: splash-opacity 500ms ease-in-out forwards;
+}
+.active .splash-mask {
+  animation: mask-scale 500ms ease-in-out forwards;
+}
+.splash-container {
+  z-index: -1;
+}
+.splash-container svg {
+  pointer-events: none !important;
+}
+@keyframes mask-scale {
+  to { transform: scale(1.7); }
+}
+@keyframes splash-opacity {
+  to { opacity: 0.3; }
+}
+@keyframes beat {
+  16% { transform: scale(.8); }
+	28% { transform: scale(1.2); }
+	44% { transform: scale(0.9); }
+	59% { transform: scale(1.1); }
+	73% { transform: scale(0.95); }
+	88% { transform: scale(1.05); }
+	100% { transform: scale(1); }
+}
+
+@keyframes easeOutElastic {
+	16% { transform: scale(.8); }
+	28% { transform: scale(1.2); }
+	44% { transform: scale(0.9); }
+	59% { transform: scale(1.1); }
+	73% { transform: scale(0.95); }
+	88% { transform: scale(1.05); }
+	100% { transform: scale(1); }
+}
