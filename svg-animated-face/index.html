@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SVG Animated Face</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <svg
+        width="20rem"
+        viewBox="0 0 198 108"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect y="103" width="198" height="5" rx="1" fill="#D6D6D6" />
+        <path
+          d="M83 103H115V103C115 103.828 114.328 104.5 113.5 104.5H84.5C83.6716 104.5 83 103.828 83 103V103Z"
+          fill="#9D9D9D"
+        />
+        <path
+          d="M21 5C21 2.23858 23.2386 0 26 0H172C174.761 0 177 2.23858 177 5V101C177 102.105 176.105 103 175 103H23C21.8954 103 21 102.105 21 101V5Z"
+          fill="#828091"
+        />
+        <rect x="27" y="6" width="144" height="90" fill="white" />
+        <g id="eyes">
+          <rect id="left" x="77" y="19" width="7" height="32" fill="#828090" />
+          <rect id="right" x="113" y="19" width="7" height="32" fill="#828090" />
+        </g>
+        <path id="mouth" d="M72 66H125V69H130V74H125V72H72V74H67V69H72V66Z" fill="#828090" />
+      </svg>
+      <p class="error-msg">Oops! something went terribly wrong. We'll be back soon.</p>
+    </div>
+  </body>
+</html>
