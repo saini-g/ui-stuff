@@ -11,6 +11,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+.container svg {
+  z-index: 10;
+}
 #eyes #left, #eyes #right {
   transform-origin: 50% 40%;
   animation: blinky-eyes 5s ease infinite;
@@ -26,36 +29,31 @@ body {
   text-align: center;
   color: #828090;
   font-family: 'Courier New', Courier, monospace;
+  z-index: 10;
+}
+.error-code {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 40rem;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  color: rgba(0, 0, 0, 0.05);
 }
 
 @keyframes blinky-eyes {
-  0% { transform: scale(1); }
-  2% { transform: scale(1.1, 0.3); }
-  4% { transform: scale(1); }
-  8% { transform: scale(1); }
-  10% { transform: scale(1.1, 0.3); }
-  12% { transform: scale(1); }
-  50% { transform: scale(1); }
-  100% { transform: scale(1); }
+  0%, 4%, 8%, 12%, 50%, 100% { transform: scale(1); }
+  2%, 10% { transform: scale(1.1, 0.3); }
 }
 @keyframes move-eyes {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(0); }
-  60% { transform: translateX(-3%); }
-  62.5% { transform: translateX(-3%); }
-  72.5% { transform: translateX(3%); }
-  75% { transform: translateX(3%); }
-  85% { transform: translateX(0); }
-  100% { transform: translateX(0); }
+  0%, 50%, 90%, 100% { transform: translateX(0); }
+  60%, 62.5% { transform: translateX(-3%); }
+  77.5%, 80% { transform: translateX(3%); }
 }
 @keyframes move-mouth {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(0); }
-  60% { transform: translateX(-2%); }
-  62.5% { transform: translateX(-2%); }
-  72.5% { transform: translateX(2%); }
-  75% { transform: translateX(2%); }
-  85% { transform: translateX(0); }
-  100% { transform: translateX(0); }
+  0%, 50%, 90%, 100% { transform: translateX(0); }
+  60%, 62.5% { transform: translateX(-2%); }
+  77.5%, 80% { transform: translateX(2%); }
 }
