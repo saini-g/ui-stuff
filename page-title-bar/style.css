@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url("fonts/Nunito-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url("fonts/Nunito-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  color: rgba(50, 50, 50, 0.85);
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+header {
+  position: relative;
+}
+.cover-image {
+  width: 100%;
+  height: 10rem;
+  background: linear-gradient(-100deg, #7caafd, #80a1f6, #8498ee, #878ee5, #8b85dc, #897dd3, #8676c9, #836ec0, #7a66b5, #715da9, #68559e, #5f4d93);
+  z-index: -1;
+  box-shadow: 0px 3px 6px 0px rgba(140, 152, 164, 0.35);
+}
+.page-title-wrap {
+  background-color: #f8f8ff;
+  width: 90%;
+  margin: -4rem auto 0;
+  box-shadow: 0px 3px 6px 0px rgba(140, 152, 164, 0.35);
+  border-radius: 0.3rem;
+  display: flex;
+  padding: 1.25rem 1rem;
+  transition: padding 200ms ease, width 200ms ease;
+}
+.headings-wrap {
+  flex: 0 0 50%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.headings-wrap .icon-container {
+  background: linear-gradient(-100deg, #8b85dc, #897dd3, #8676c9, #836ec0, #7a66b5, #715da9);
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  line-height: 1;
+  margin-right: 0.75rem;
+  transition: padding 200ms ease;
+}
+.headings-wrap .text-wrap h2,
+.headings-wrap .text-wrap p {
+  margin: 0;
+}
+.text-wrap {
+  transition: font-size 200ms ease;
+}
+.action-btns {
+  flex: 0 0 50%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.action-btns a {
+  padding: 0.5rem 1rem;
+  text-decoration: none !important;
+  color: inherit;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #e7eaf3;
+}
+.action-btns a:first-child {
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+.action-btns a:last-child {
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+.action-btns a:not(:last-child) {
+  margin-right: -1px;
+}
+.action-btns a:hover {
+  background-color: #f6f6ff;
+}
+.main-content {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1rem;
+  line-height: 1.5;
+}
+
+.sticky-title-box {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 0.75rem 2.5rem;
+  border-radius: 0;
+}
+.sticky-title-box .icon-container {
+  padding: 0.5rem;
+}
+.sticky-title-box .text-wrap {
+  font-size: 90%;
+}
