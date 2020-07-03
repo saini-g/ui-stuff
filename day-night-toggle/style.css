@@ -1,0 +1,204 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+#toggle-switch {
+  display: none;
+}
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 4rem;
+  height: 2.4rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+.toggle-btn::before {
+  content: '';
+  height: 1.8rem;
+  width: 1.8rem;
+  border-radius: 0.9rem;
+  background-color: ghostwhite;
+  position: absolute;
+  top: 0.3rem;
+  transition: left 200ms ease-in-out;
+}
+#toggle-switch:not(:checked) ~ .toggle-btn {
+  background-color: #F8F6D5;
+}
+#toggle-switch:checked ~ .toggle-btn {
+  background-color: #687EB4;
+}
+#toggle-switch:not(:checked) ~ .toggle-btn::before {
+  left: 0.3rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+#toggle-switch:checked ~ .toggle-btn::before {
+  left: 1.9rem;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+
+/* day mode color scheme */
+#toggle-switch:not(:checked) + svg.full-scene {
+  --color-sky: #97D9F4;
+
+  --color-layer-4: #5A965A;
+
+  --color-layer-3: #447B44;
+
+  --color-layer-2-trunk: #396839;
+  --color-layer-2-leaves: #397039;
+  --color-layer-2-mountain: #376A37;
+
+  --color-layer-1-trunk: #2B502B;
+  --color-layer-1-leaves: #315D31;
+  --color-layer-1-mountain: #2C572C;
+}
+
+/* night mode color scheme */
+#toggle-switch:checked + svg.full-scene {
+  --color-sky: #242632;
+  --color-star: #F5E7DE;
+
+  --color-layer-4: #374872;
+
+  --color-layer-3: #253B5E;
+
+  --color-layer-2-trunk: #111F45;
+  --color-layer-2-leaves: #132656;
+  --color-layer-2-mountain: #1B294F;
+
+  --color-layer-1-trunk: #1C223F;
+  --color-layer-1-leaves: #121835;
+  --color-layer-1-mountain: #141E3A;
+}
+
+
+svg.full-scene .sky {
+  transition: fill 600ms ease-in-out;
+  fill: var(--color-sky);
+}
+svg.full-scene .stars .star {
+  fill: var(--color-star);
+  transition: opacity 200ms ease-in-out;
+}
+svg.full-scene .layer4 {
+  transition: fill 600ms ease-in-out;
+  fill: var(--color-layer-4);
+}
+svg.full-scene .layer3 {
+  transition: fill 600ms ease-in-out;
+  fill: var(--color-layer-3);
+}
+svg.full-scene .layer2 .trunk {
+  transition: fill 600ms ease-in-out;
+  fill: var(--color-layer-2-trunk);
+}
+svg.full-scene .layer2 .leaves {
+  transition: fill 600ms ease-in-out;
+  fill: var(--color-layer-2-leaves);
+}
+svg.full-scene .layer2 .mountain {
+  transition: fill 600ms ease-in-out;
+  fill: var(--color-layer-2-mountain);
+}
+svg.full-scene .layer1 .trunk {
+  transition: fill 600ms ease-in-out;
+  fill: var(--color-layer-1-trunk);
+}
+svg.full-scene .layer1 .leaves {
+  transition: fill 600ms ease-in-out;
+  fill: var(--color-layer-1-leaves);
+}
+svg.full-scene .layer1 .mountain {
+  transition: fill 600ms ease-in-out;
+  fill: var(--color-layer-1-mountain);
+}
+
+
+svg.full-scene .glow {
+  transform-origin: 67.5% 13.28%;
+  animation: pulse 6s ease-in-out infinite;
+}
+#toggle-switch:not(:checked) + svg.full-scene .sun {
+  animation: slide-up 900ms ease-in-out forwards;
+}
+#toggle-switch:checked + svg.full-scene .sun {
+  animation: slide-down 300ms ease-in-out forwards;
+}
+#toggle-switch:not(:checked) + svg.full-scene .moon {
+  animation: slide-down 300ms ease-in-out forwards;
+}
+#toggle-switch:checked + svg.full-scene .moon {
+  animation: slide-up 900ms ease-in-out forwards;
+}
+
+
+#toggle-switch:not(:checked) + svg.full-scene .stars .star {
+  animation: none;
+  opacity: 0;
+}
+#toggle-switch:checked + svg.full-scene .stars .star {
+  animation: twinkle 800ms ease-in-out infinite;
+}
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(1),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(2),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(11),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(12),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(21),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(22) {
+  animation-delay: 150ms;
+}
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(3),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(4),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(13),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(14) {
+  animation-delay: 300ms;
+}
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(5),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(6),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(15),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(16) {
+  animation-delay: 450ms;
+}
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(7),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(8),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(17),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(18) {
+  animation-delay: 600ms;
+}
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(9),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(10),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(19),
+#toggle-switch:checked + svg.full-scene .stars .star:nth-of-type(20) {
+  animation-delay: 750ms;
+}
+
+@keyframes slide-down {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20rem); }
+}
+@keyframes slide-up {
+  0%, 33% { transform: translateY(20rem); }
+	66.5% { transform: translateY(-2rem); }
+	77.3% { transform: translateY(1.25rem); }
+	86.2% { transform: translateY(-0.75rem); }
+	96% { transform: translateY(0.25rem); }
+	100% { transform: translateY(0); }
+}
+@keyframes twinkle {
+  0%, 40%, 100% { opacity: 1; }
+  20% { opacity: 0.4; }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.075); }
+}

@@ -1,5 +1,8 @@
 # Just some random UI stuff!
 
+#### day-night-toggle
+> Pure CSS dark mode light mode toggle template for websites
+
 #### nav-html-css
 > responsive nav bar using pure css
 
