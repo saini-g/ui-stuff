@@ -1,0 +1,121 @@
+/* #region - fonts */
+@font-face {
+  font-family: '...';
+  src: url('./fonts/...') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+/* #endregion */
+
+/* #region - variables */
+:root {
+  --ff-primary: 'primary font family, for body content';
+  --ff-secondary: 'secondary font family, for headings and such';
+  --bold: 600;
+  --regular: 400;
+  --light: 300;
+  --font-sm: 0.875rem;
+  --font-lg: 1.125rem;
+
+  --grey-100: hsl(203, 10%, 90%);
+  --grey-200: hsl(203, 10%, 70%);
+  --grey-300: hsl(203, 10%, 50%);
+  --grey-400: hsl(203, 10%, 30%);
+  --grey-500: hsl(203, 10%, 20%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 96%);
+  
+
+  --primary-200: hsl(194, 68%, 94%);
+  --primary-300: hsl(194, 48%, 60%);
+  --primary-400: hsl(194, 48%, 34%);
+  --primary-500: hsl(194, 47%, 20%);
+  --secondary-200: hsl(14, 85%, 95%);
+  --secondary-300: hsl(13, 86%, 72%);
+  --secondary-400: hsl(13, 69%, 50%);
+  --secondary-500: hsl(13, 91%, 35%);
+  --accent-1-200: hsl(43, 41%, 97%);
+  --accent-1-400: hsl(43, 36%, 73%);
+  --accent-2-200: hsl(224, 100%, 95%);
+  --accent-2-400: hsl(223, 38%, 60%);
+
+  --btn-radius: 0.1875em;
+
+  --shadow: 0px 1px 2px 1px hsla(210, 15%, 13%, 0.2);
+  --shadow-hover: 0px 3px 6px 1px hsla(210, 15%, 13%, 0.2);
+  --shadow-dropdown: 0px 4px 8px 1px hsla(210, 15%, 13%, 0.2);
+  --shadow-btn: 0px 1px 2px 0px hsla(194, 48%, 20%, 0.24);
+  --shadow-btn-hover: 0px 3px 6px 0px hsla(194, 48%, 20%, 0.24);
+  --shadow-btn-sec-rest: 0px 1px 2px 0px hsla(194, 48%, 34%, 0.14);
+  --shadow-btn-sec-hover: 0px 3px 6px 0px hsla(194, 48%, 34%, 0.14);
+
+  --time-0: 0ms;
+  --time-1: 0ms;
+  --time-xs: 150ms;
+  --time-sm: 250ms;
+  --time-md: 350ms;
+  --time-lg: 500ms;
+}
+/* #endregion */
+
+/* #region - resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--font-primary);
+}
+h1, h2 {
+  line-height: 1.25;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+a {
+  text-decoration: none;
+}
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* #endregion */
+
+/* #region - app styles */
+
+/* #region - nav styles */
+/* #endregion */
+
+/* #region - sidebar styles */
+/* #endregion */
+
+/* ... */
+
+/* #endregion */
